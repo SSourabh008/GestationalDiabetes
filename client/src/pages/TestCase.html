@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestational Diabetes Prediction - Test Cases</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 20px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #333;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px 10px;
+      text-align: left;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+    th {
+      width: 16%;
+      background-color: #f2f2f2;
+      font-weight: bold;
+      color: #555;
+    }
+    tbody tr:hover {
+      background-color: #f5f5f5;
+    }
+    caption {
+      caption-side: top;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: left;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Gestational Diabetes Prediction - Test Cases</h1>
+    <table>
+      <caption>System Testing Scenarios</caption>
+      <thead>
+        <tr>
+          <th>Test Case ID</th>
+          <th>Test Scenario</th>
+          <th>Input</th>
+          <th>Expected Output</th>
+          <th>Actual Output</th>
+          <th>Status (Pass/Fail)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>GDM-01</td>
+          <td>Model Initialization</td>
+          <td>Model parameters (e.g., algorithm type, hyperparameters)</td>
+          <td>Model initialized successfully without errors</td>
+          <td>Model initialized successfully without errors encountered.</td>
+          <td>Pass</td>
+        </tr>
+        <tr>
+          <td>GDM-02</td>
+          <td>Model Training</td>
+          <td>Preprocessed dataset with clinical parameters</td>
+          <td>Trained model with acceptable accuracy and ROC-AUC</td>
+          <td>Model trained successfully, achieving improved accuracy and ROC-AUC.</td>
+          <td>Pass</td>
+        </tr>
+        <tr>
+          <td>GDM-03</td>
+          <td>Model Evaluation</td>
+          <td>Trained model plus validation data</td>
+          <td>Performance metrics (accuracy, sensitivity) met or exceeded expected thresholds</td>
+          <td>Evaluation metrics met or exceeded the expected thresholds.</td>
+          <td>Pass</td>
+        </tr>
+        <tr>
+          <td>GDM-04</td>
+          <td>Risk Prediction</td>
+          <td>New patient data (clinical features)</td>
+          <td>Predicted GDM risk returned successfully</td>
+          <td>GDM risk predicted successfully for the given patient data.</td>
+          <td>Pass</td>
+        </tr>
+        <tr>
+          <td>GDM-05</td>
+          <td>Prediction Accuracy</td>
+          <td>Test dataset with known outcomes</td>
+          <td>System obtains expected performance metrics</td>
+          <td>The system matched expected performance metrics on known outcomes.</td>
+          <td>Pass</td>
+        </tr>
+        <tr>
+          <td>GDM-06</td>
+          <td>Handling Invalid Input</td>
+          <td>Invalid or incomplete patient data</td>
+          <td>Error message or prompt for valid input</td>
+          <td>An error message was displayed, prompting the user for valid input.</td>
+          <td>Pass</td>
+        </tr>
+        <tr>
+          <td>GDM-07</td>
+          <td>Large Batch Processing</td>
+          <td>1000+ patient records for risk assessment</td>
+          <td>System processes entire batch without crashes or performance degradation</td>
+          <td>Entire batch processed successfully without crashes or performance issues.</td>
+          <td>Pass</td>
+        </tr>
+        <tr>
+          <td>GDM-08</td>
+          <td>Incorrect Classification</td>
+          <td>Borderline patient data with borderline values (e.g., borderline fasting glucose)</td>
+          <td>System returns consistent classification matching expected thresholds</td>
+          <td>System misclassified borderline patient as High Risk instead of Low Risk.</td>
+          <td>Fail</td>
+        </tr>
+        <tr>
+          <td>GDM-09</td>
+          <td>Database Connectivity</td>
+          <td>Attempt to store prediction results</td>
+          <td>Prediction results stored successfully in the database</td>
+          <td>Database connection error: “Failed to connect to DB.”</td>
+          <td>Fail</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
