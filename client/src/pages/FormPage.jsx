@@ -26,6 +26,7 @@ const FormPage = () => {
       const response = await axios.post("http://127.0.0.1:5000/predict", {
         features: Object.values(formData).map(Number),
       });
+      console.log(response.data)
       setResult(response.data); // Store the entire response (Prediction + Advice)
     } catch (error) {
       console.error("Error fetching prediction:", error);
@@ -119,10 +120,18 @@ const FormPage = () => {
                 )}
               </>
             ) : (
+              <>
               <h2 className="low-risk">
                 Low Risk of Gestational Diabetes ✅
               </h2>
-            )}
+              {result.Warnings && (
+  <div className="warnings" style={{ whiteSpace: 'pre-wrap' }}>
+    <h4>Warnings:</h4>
+    <p>{result.Warnings}</p>
+  </div>
+  )}
+  </>
+)}
           </div>
         </div>
       )}
